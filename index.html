@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="select-container container">
+        <h1>The Holy Bible</h1>
+    </header>
+    <div class="container">
+        <div class="select-container">
+            <select name="version" id="version" onchange="changeVersion()">
+                <option value="en-asv">ASV</option>
+                <option value="en-kjv">KJV</option>
+            </select>
+            <select name="books" id="books" onchange="populateChapters()">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <select name="chapters" id="chapters" onchange="displayBibleText()">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        <div class="book-content">
+            <div id="bibleText">
+                <!-- Bible text will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fab" onclick="toggleFab()">
+        +
+    </div>
+    <div class="fab-options">
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+        <button onclick="copyText()">Copy</button>
+        <!-- <button onclick="highlightText()">Highlight</button> -->
+        <button onclick="screenshot()">Screenshot</button>
+    </div>
+
+  
+      
+    <script src="script.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</html>

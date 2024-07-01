@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Select Container Styles */
+  .select-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .select-container select {
+    width: 30%; /* adjusted width to fit three dropdowns */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select-container select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the active book div */
+  .book {
+    display: none;
+  }
+  
+  .book.active {
+    display: block;
+  }
+  
+  /* Style the chapter and verse text */
+  .book p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  
+  /* Style the dropdown arrow */
+  #books::-webkit-scrollbar,
+  #chapters::-webkit-scrollbar,
+  #version::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #books, #chapters, #version {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    padding-right: 30px;
+  }
+  
+  /* Style the dropdown options */
+  #books option, #chapters option, #version option {
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #books option:last-child, #chapters option:last-child, #version option:last-child {
+    border-bottom: none;
+  }
+
+  
+
+
+/* FAB Styles */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #050201;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .fab-options {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .fab-options button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .fab-options button:hover {
+    background-color: #e64a19;
+  }
+  
+  .fab-options.active {
+    display: flex;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode .container {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  body.dark-mode .select-container select {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  body.dark-mode .fab {
+    background-color: #fff;
+    color: #ff5722;
+  }
+  
+  body.dark-mode .fab-options button {
+    background-color: #fff;
+    color: #ff5722;
+  }
+  
+  body.dark-mode .fab-options button:hover {
+    background-color: #eee;
+  }
+
+
+  /* Add styles for the color picker and save button */
+#colorPicker {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+  }
+  
+  #saveHighlight {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+  
+  #saveHighlight:hover {
+    background-color: #0056b3;
+  }
+  
